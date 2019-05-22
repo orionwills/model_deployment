@@ -4,6 +4,13 @@ h1 {
     background: black;
     font-family: sans-serif
 }
+
+h2 {
+    font-size: 32px;
+    color: whitesmoke;
+    background: black;
+    font-family: sans-serif
+}
 p {
     color: whitesmoke;
     background: black;
