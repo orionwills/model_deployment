@@ -59,3 +59,7 @@ def factorial():
     f_len = len(str(f(f_number)))
     f_solved = str(f(f_number))
     return render_template('factorial-solved.html', f_number=f_number, f_solved=f_solved, f_len=f_len)
+
+if __name__ == '__main__':
+    import waitress
+    waitress.serve(app, port=5005)
