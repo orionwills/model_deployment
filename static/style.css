@@ -10,13 +10,12 @@ p {
     font-size: 24px;
     font-family: sans-serif
 }
-a {
+.navi, a {
     color: whitesmoke;
     background: black;
-    text-decoration: underline;
     font-size: 24px;
-    font-family: sans-serif;
-    font-weight: bold
+    font-family: Arial;
+    font-weight: bold;
 }
 
 body {
