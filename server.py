@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     number = randint(1,6)
-    print(f'User rolled {number}')
+    print('User rolled {}'.format(number))
     return render_template('index.html', random_number=number)
 
 @app.route('/ada')
@@ -18,8 +18,8 @@ def ada_page():
 @app.route('/roll-dice')
 def roll_dice():
     die = randint(1, 6)
-    print(f'User rolled {die}')
-    return f'<h1>You rolled a magical {die}!!!</h1>'
+    print('User rolled', die)
+    return '<h1>You rolled a magical {}!!!</h1>'.format(die)
 
 @app.route('/fancy-math-form')
 def fancy_math():
