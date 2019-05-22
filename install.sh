@@ -1,6 +1,5 @@
 # Script used for deployment with cods (https://github.com/zgulde/cods)
 set -e
-set -u
 
 cd $SITE_DIR
 
