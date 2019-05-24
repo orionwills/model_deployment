@@ -5,10 +5,6 @@ from math import factorial as f
 
 app = Flask(__name__)
 
-if __name__ == '__main__':
-    import waitress
-    waitress.serve(app, port=5005)
-
 @app.route('/')
 def index():
     number = randint(1,6)
@@ -67,3 +63,11 @@ def factorial():
 @app.route('/resume')
 def resume():
     return render_template('resume.html')
+
+
+
+
+###
+if __name__ == '__main__':
+    import waitress
+    waitress.serve(app, port=5005)
