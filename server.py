@@ -3,7 +3,9 @@ from random import randint
 import numpy as np
 from math import factorial as f
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='public')
 
 @app.route('/')
 def index():
