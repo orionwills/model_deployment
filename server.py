@@ -67,9 +67,6 @@ def resume():
     return render_template('resume.html')
 
 
-
-
-###
 if __name__ == '__main__':
     import waitress
     waitress.serve(app, port=5005)
