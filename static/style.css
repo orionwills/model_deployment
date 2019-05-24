@@ -17,6 +17,12 @@ p {
     font-size: 24px;
     font-family: sans-serif
 }
+li {
+    color: whitesmoke;
+    background: black;
+    font-size: 24px;
+    font-family: sans-serif
+}
 .navi, a {
     color: whitesmoke;
     background: black;
