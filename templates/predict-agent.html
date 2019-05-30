@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
-    <title>Orion Wills' Resume</title>
+    <title>Agent Prediction</title>
 </head>
 <body class="p-5">
     {% include 'navbar.html' %}
-    <br /><br />
-    <a href="/orion_wills_two_pager.pdf">Orion Wills' Two Page Resume</a>
-</body>
-</html>
+    <h1>Agent Prediction</h1>
+    <p>This agent has the prediction of:</p>
+    <p>{{ prediction }}</p>
+    <p>Based on the following information:</p>
+    <ul>
+        <li>{{ sales_volume }}</li>
+        <li>{{ sales_units }}</li>
+        <li>{{ agent_commission }}</li>
+        <li>{{ brokerage_commission }}</li>
+
+    </ul>

@@ -66,6 +66,9 @@ def factorial():
 def resume():
     return render_template('resume.html')
 
+@app.route('/BE-Model-Agents')
+def model_agents():
+    return render_template('be-model-agents.html')
 
 if __name__ == '__main__':
     import waitress
