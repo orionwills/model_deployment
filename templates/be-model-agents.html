@@ -9,8 +9,8 @@
     <title>Brokerage Engine Model Agents</title>
 </head>
 <body class="p-5">
-        {% include 'navbar.html' %}
-        <br /><br />
+    {% include 'navbar.html' %}
+    <br /><br />
     <h1>Please input the information about the Agent:</h1>
     <form action="/predict-agent" method="POST">
         <label for="sales_volume">Previous 12 Month Sales Volume (Gross Sales)</label>
@@ -24,7 +24,7 @@
         <br />
         <label for="brokerage_commission">Previous 12 Month Brokerage Commission</label>
         <input id="brokerage_commission" type="text" name="brokerage_commission">
-        <input type="submit">
+        <input class="btn" type="submit">
     
 </body>
 </html>
