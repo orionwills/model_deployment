@@ -66,15 +66,18 @@ def factorial():
 def resume():
     return render_template('resume.html')
 
-@app.route('/BE-Model-Agents')
+@app.route('/be-model-agents')
 def model_agents():
     return render_template('be-model-agents.html')
 
 @app.route('/predict-agent', methods=["POST"])
 def predict_agent():
     prediction = "Yes, they will be a top performer."
-    values = [sales_volume, sales_units, agent_commission, brokerage_commission]
-    return render_template('predict-agent.html', sales_volume=sales_volume, sales_units=sales_units, agent_commission=agent_commission, brokerage_commission=brokerage_commission)
+    sales_volume = request.form['sales_volume']
+    sales_units = request.form['sales_units']
+    agent_commission = request.form['agent_commission']
+    brokerage_commission = request.form['brokerage_commission']
+    return render_template('predict-agent.html',prediction=prediction, sales_volume=sales_volume, sales_units=sales_units, agent_commission=agent_commission, brokerage_commission=brokerage_commission)
 
 if __name__ == '__main__':
     import waitress
