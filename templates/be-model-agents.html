@@ -13,17 +13,20 @@
     <br /><br />
     <h1>Please input the information about the Agent:</h1>
     <form action="/predict-agent" method="POST">
-        <label for="sales_volume">Previous 12 Month Sales Volume (Gross Sales)</label>
-        <input id="sales_volume" type="text" name="sales_volume">
+        <label for="avg_sales_trans">Average Transaction Sales Amount</label>
+        <input id="avg_sales_trans" type="text" name="avg_sales_trans">
         <br />
-        <label for="sales_units">Previous 12 Month Sales Volume (Units)</label>
-        <input id="sales_units" type="text" name="sales_units">
+        <label for="trans_count">Total Transaction Count</label>
+        <input id="trans_count" type="text" name="trans_count">
         <br />
-        <label for="agent_commission">Previous 12 Month Agent Commission</label>
-        <input id="agent_commission" type="text" name="agent_commission">
+        <label for="list_trans_count">Listing Transaction Count</label>
+        <input id="list_trans_count" type="text" name="list_trans_count">
         <br />
-        <label for="brokerage_commission">Previous 12 Month Brokerage Commission</label>
-        <input id="brokerage_commission" type="text" name="brokerage_commission">
+        <label for="buyer_trans_count">Buyer Transaction Count</label>
+        <input id="buyer_trans_count" type="text" name="buyer_trans_count">
+        <br />
+        <label for="unique_zip_codes">Count of Unique Zip Codes</label>
+        <input id="unique_zip_codes" type="text" name="unique_zip_codes">
         <input class="btn" type="submit">
     
 </body>

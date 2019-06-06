@@ -15,10 +15,11 @@
     <p>{{ prediction }}</p>
     <p>Based on the following information:</p>
     <ul>
-        <li>${{ sales_volume }} total sales volume</li>
-        <li>{{ sales_units }} total sales units</li>
-        <li>{{ agent_commission }} total agent commission</li>
-        <li>{{ brokerage_commission }} total brokerage commission</li>
+        <li>${{ avg_sales_trans }}: average transactions</li>
+        <li>{{ trans_count }}: count of transactions</li>
+        <li>{{ list_trans_count }}: listing side transactions</li>
+        <li>{{ buyer_trans_count }}: buyer's side transactions</li>
+        <li>{{ unique_zip_codes }}: total unique zip codes</li>
     </ul>
 </body>
 </html>
