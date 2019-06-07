@@ -1,8 +1,8 @@
 h1 {
     font-size: 45px;
-    color: whitesmoke;
-    background: black;
-    font-family: sans-serif
+    color: purple;
+    background: greenyellow;
+    font-family: fantasy
 }
 
 h2 {
@@ -18,10 +18,10 @@ p {
     font-family: sans-serif
 }
 li {
-    color: whitesmoke;
-    background: black;
-    font-size: 24px;
-    font-family: sans-serif
+    font-size: 45px;
+    color: purple;
+    background: greenyellow;
+    font-family: fantasy
 }
 .navi, a {
     color: whitesmoke;
