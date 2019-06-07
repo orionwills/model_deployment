@@ -73,11 +73,17 @@ def model_agents():
 @app.route('/predict-agent', methods=["POST"])
 def predict_agent():
     prediction = "Yes, they will be a top performer."
-    sales_volume = request.form['sales_volume']
-    sales_units = request.form['sales_units']
-    agent_commission = request.form['agent_commission']
-    brokerage_commission = request.form['brokerage_commission']
-    return render_template('predict-agent.html',prediction=prediction, sales_volume=sales_volume, sales_units=sales_units, agent_commission=agent_commission, brokerage_commission=brokerage_commission)
+    avg_sales_trans = request.form['avg_sales_trans']
+    trans_count = request.form['trans_count']
+    list_trans_count = request.form['list_trans_count']
+    buyer_trans_count = request.form['buyer_trans_count']
+    unique_zip_codes = request.form['unique_zip_codes']
+    return render_template('predict-agent.html',avg_sales_trans=avg_sales_trans,
+                                                trans_count=trans_count,
+                                                list_trans_count=list_trans_count,
+                                                buyer_trans_count=buyer_trans_count,
+                                                unique_zip_codes=unique_zip_codes,
+                                                prediction=prediction)
 
 if __name__ == '__main__':
     import waitress
