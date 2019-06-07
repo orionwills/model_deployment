@@ -78,7 +78,7 @@ def predict_agent():
     trans_count = int(request.form['trans_count'])
     list_trans_count = int(request.form['list_trans_count'])
     buyer_trans_count = int(request.form['buyer_trans_count'])
-    list_sell_ratio = list_trans_count / (list_trans_count + buyer_trans_count)
+    list_sell_ratio = round(list_trans_count / (list_trans_count + buyer_trans_count), 2)
     number_of_zips = request.form['unique_zip_codes']
     # importing the pickle
     with open('public/dt_model_agents.obj', 'rb') as fp:
@@ -91,7 +91,7 @@ def predict_agent():
     agent_info = pd.DataFrame(agent_dict, index=[1])
     #
     output = dt_model_agents.predict(agent_info)
-    if output == 'True':
+    if str(output[0]) == 'True':
         prediction = 'Agent is trending to be a $5mil+ agent.'
     else:
         prediction = 'Agent is not trending to be a $5mil+ agent.'
