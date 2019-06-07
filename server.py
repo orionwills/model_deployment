@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 from random import randint
 import numpy as np
 from math import factorial as f
+import pickle
+import pandas as pd
 
 app = Flask(__name__,
             static_url_path='',
@@ -72,17 +74,34 @@ def model_agents():
 
 @app.route('/predict-agent', methods=["POST"])
 def predict_agent():
-    prediction = "Yes, they will be a top performer."
-    avg_sales_trans = request.form['avg_sales_trans']
-    trans_count = request.form['trans_count']
-    list_trans_count = request.form['list_trans_count']
-    buyer_trans_count = request.form['buyer_trans_count']
-    unique_zip_codes = request.form['unique_zip_codes']
+    avg_sales_trans = int(request.form['avg_sales_trans'])
+    trans_count = int(request.form['trans_count'])
+    list_trans_count = int(request.form['list_trans_count'])
+    buyer_trans_count = int(request.form['buyer_trans_count'])
+    list_sell_ratio = list_trans_count / (list_trans_count + buyer_trans_count)
+    number_of_zips = request.form['unique_zip_codes']
+    # importing the pickle
+    with open('public/dt_model_agents.obj', 'rb') as fp:
+        dt_model_agents = pickle.load(fp)
+    #
+    agent_cols = ['trans_count', 'avg_sales_trans', 'list_sell_ratio', 'number_of_zips']
+    agent_info = [19, 350000, .75, 5]
+    #
+    agent_dict = dict(zip(agent_cols, agent_info))
+    agent_info = pd.DataFrame(agent_dict, index=[1])
+    #
+    output = dt_model_agents.predict(agent_info)
+    if output == 'True':
+        prediction = 'Agent is trending to be a $5mil+ agent.'
+    else:
+        prediction = 'Agent is not trending to be a $5mil+ agent.'
+
     return render_template('predict-agent.html',avg_sales_trans=avg_sales_trans,
                                                 trans_count=trans_count,
                                                 list_trans_count=list_trans_count,
                                                 buyer_trans_count=buyer_trans_count,
-                                                unique_zip_codes=unique_zip_codes,
+                                                list_sell_ratio=list_sell_ratio,
+                                                unique_zip_codes=number_of_zips,
                                                 prediction=prediction)
 
 if __name__ == '__main__':
