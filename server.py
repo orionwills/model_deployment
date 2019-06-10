@@ -74,7 +74,7 @@ def model_agents():
 
 @app.route('/predict-agent', methods=["POST"])
 def predict_agent():
-    avg_sales_trans = int(request.form['avg_sales_trans'])
+    avg_sales_trans = int(request.form['avg_sales_trans'].replace(',', ''))
     list_trans_count = int(request.form['list_trans_count'])
     buyer_trans_count = int(request.form['buyer_trans_count'])
     trans_count = int(list_trans_count + buyer_trans_count)
