@@ -109,6 +109,10 @@ def predict_agent():
                                                 output=output,
                                                 audio=audio)
 
+@app.route('/data-viz')
+def data_viz():
+    return render_template('data-viz.html')
+
 if __name__ == '__main__':
     import waitress
     waitress.serve(app, port=5005)
