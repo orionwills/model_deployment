@@ -8,26 +8,30 @@
     <link rel="stylesheet" href="/style.css">
     <title>Brokerage Engine Model Agents</title>
 </head>
-<body class="p-5">
-    {% include 'navbar.html' %}
+<body class="bebody">
     <br /><br />
-    <h1>Please input the information about the Agent:</h1>
-    <form action="/predict-agent" method="POST">
-        <label for="avg_sales_trans">Average Transaction Sales Amount</label>
-        <input id="avg_sales_trans" type="text" name="avg_sales_trans">
-        <br />
-        <label for="trans_count">Total Transaction Count</label>
-        <input id="trans_count" type="text" name="trans_count">
-        <br />
-        <label for="list_trans_count">Listing Transaction Count</label>
-        <input id="list_trans_count" type="text" name="list_trans_count">
-        <br />
-        <label for="buyer_trans_count">Buyer Transaction Count</label>
-        <input id="buyer_trans_count" type="text" name="buyer_trans_count">
-        <br />
-        <label for="unique_zip_codes">Count of Unique Zip Codes</label>
-        <input id="unique_zip_codes" type="text" name="unique_zip_codes">
-        <input class="btn" type="submit">
-    
+    <img src="/Brokerage-Engine-logo.svg" alt="Brokerage Engine">
+    <div class="beheader">Please input the information about the Agent:</div>
+    <div class="container">
+        <form action="/predict-agent" method="POST">
+            <div class="form-group">
+                <label for="avg_sales_trans">Average Transaction Sales Amount</label>
+                <input id="avg_sales_trans" type="text" name="avg_sales_trans" style="border:1px solid #f27b29">
+            </div>
+            <div class="form-group">
+                <label for="list_trans_count">Listing Transaction Count</label>
+                <input id="list_trans_count" type="text" name="list_trans_count" style="border:1px solid #f27b29">
+            </div>
+            <div class="form-group">
+                <label for="buyer_trans_count">Buyer Transaction Count</label></label>
+                <input id="buyer_trans_count" type="text" name="buyer_trans_count" style="border:1px solid #f27b29">
+            </div>
+            <div class="form-group">
+                <label for="unique_zip_codes">Count of Unique Zip Codes</label>
+                <input id="unique_zip_codes" type="text" name="unique_zip_codes" style="border:1px solid #f27b29">
+            </div>
+            <input class="btn" type="submit">
+            </form>
+        </div>
 </body>
 </html>

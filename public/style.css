@@ -1,8 +1,16 @@
 h1 {
     font-size: 45px;
-    color: purple;
-    background: greenyellow;
-    font-family: fantasy
+    color: whitesmoke;
+    background: black;
+    font-family: sans-serif
+}
+
+.beheader {
+    background: #e5e5e5;
+    color: #f27b29;
+    font-family: Arial;
+    font-size: 45px;
+    text-align: center;
 }
 
 h2 {
@@ -18,10 +26,10 @@ p {
     font-family: sans-serif
 }
 li {
-    font-size: 45px;
-    color: purple;
-    background: greenyellow;
-    font-family: fantasy
+    color: #f27b29;
+    background: #e5e5e5;
+    font-size: 24px;
+    font-family: sans-serif
 }
 .navi, a {
     color: whitesmoke;
@@ -36,13 +44,54 @@ body {
     font-family: sans-serif
 }
 
+.bep {
+    background: #e5e5e5;
+    color: black;
+    font-family: Arial;
+    text-align: center;
+}
+
+.bebody {
+    background: #e5e5e5;
+    color: #f27b29;
+    font-family: Arial;
+    width: 1024px;
+    margin: 0 auto;
+}
+
 label {
-    background: black;
-    color: whitesmoke;
-    font-family: sans-serif
+    background: #e5e5e5;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 .btn {
-    background: whitesmoke;
+    background:  #f27b29;
     color: black;
+    font-weight: bold;
+    font-family: Arial;
+    border: 1px solid #e5e5e5;
+    display: block; 
+    margin-top: 1.6em;
+}
+
+.container {
+    width: 780px;
+    font-size: 24px;
+    clear: both
+}
+
+.container input {
+    width: 100%;
+    font-size: 24px;
+    clear: both
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 100%
 }
