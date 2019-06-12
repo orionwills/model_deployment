@@ -88,6 +88,8 @@ def predict_agent():
     agent_info = pd.DataFrame(agent_dict, index=[1])
     #
     output = dt_model_agents.predict(agent_info)
+    y_proba = dt_model_agents.predict_proba(agent_info)
+    y_proba = round(y_proba[0][1] * 100, 2)
     if str(output[0]) == 'True':
         prediction = 'Agent is on track to be a top performer and produce more than $5 million in sales for 2019.'
     else:
@@ -97,6 +99,7 @@ def predict_agent():
                                                 trans_count=trans_count,
                                                 unique_zip_codes=number_of_zips,
                                                 prediction=prediction,
+                                                y_proba=y_proba,
                                                 output=output)
 
 @app.route('/data-viz')
