@@ -16,15 +16,15 @@
         <form action="/predict-agent" method="POST">
             <div class="form-group">
                 <label for="total_sales">Sales Volume</label>
-                <input id="total_sales" type="number" name="total_sales" placeholder="6,000,000 -- total annual sales" style="border:1px solid #f27b29">
+                <input id="total_sales" type="number" name="total_sales" placeholder="6,000,000 -- total annual sales" style="border:1px solid #f27b29" autofocus required>
             </div>
             <div class="form-group">
                 <label for="trans_count">Total Transactions</label>
-                <input id="trans_count" type="number" name="trans_count" placeholder="20 -- total transactions" style="border:1px solid #f27b29">
+                <input id="trans_count" type="number" name="trans_count" placeholder="20 -- total transactions" style="border:1px solid #f27b29" required>
             </div>
             <div class="form-group">
                 <label for="unique_zip_codes">Count of Unique ZIP Codes</label>
-                <input id="unique_zip_codes" type="number" name="unique_zip_codes" placeholder="15 -- number of unique zip codes" style="border:1px solid #f27b29">
+                <input id="unique_zip_codes" type="number" name="unique_zip_codes" placeholder="15 -- number of unique zip codes" style="border:1px solid #f27b29" required>
             </div>
             <input class="btn" type="submit">
             </form>
