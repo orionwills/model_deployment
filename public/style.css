@@ -26,17 +26,18 @@ p {
     font-family: sans-serif
 }
 li {
-    color: #f27b29;
-    background: #e5e5e5;
+    color: whitesmoke;
+    background: black;
     font-size: 24px;
     font-family: sans-serif
 }
 .navi, a {
-    color: whitesmoke;
-    background: black;
-    font-size: 24px;
+    color: #f27b29;
+    background: #e5e5e5;
+    font-size: 32px;
     font-family: Arial;
     font-weight: bold;
+    text-align: center
 }
 
 body {
@@ -88,10 +89,15 @@ label {
     clear: both
 }
 
-img {
+/* img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
     width: 100%
+} */
+
+.img-fluid {
+    height: auto;
+    max-width: 100%
 }
