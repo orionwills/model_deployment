@@ -31,13 +31,11 @@ li {
     font-size: 24px;
     font-family: sans-serif
 }
-.navi, a {
-    color: #f27b29;
-    background: #e5e5e5;
-    font-size: 32px;
-    font-family: Arial;
-    font-weight: bold;
-    text-align: center
+.navi {
+    color: whitesmoke;
+    background: black;
+    font-size: 18px;
+    font-family: Arial
 }
 
 body {
